@@ -4,8 +4,8 @@ interface ICreateOptions {
      * The directory where data will be stored (Default: uses directory option passed to OrbitDB constructor or ./orbitdb if none was provided).
      */
     directory?: string;
-    
-    accessController?: { 
+
+    accessController?: {
         /**
          * An array of hex encoded public keys which are used to set write access to the database.
          * ["*"] can be passed in to give write access to everyone.
@@ -13,13 +13,13 @@ interface ICreateOptions {
          * (Default: uses the OrbitDB instance key orbitdb.key, which would give write access only to yourself)
          */
         write?: string[]
-        
+
         /**
          * Name of custom AccessController
          */
-        type?: string 
+        type?: string
     };
-    
+
     /**
      * Overwrite an existing database (Default: false)
      */

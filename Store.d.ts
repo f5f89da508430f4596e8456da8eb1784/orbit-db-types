@@ -13,7 +13,7 @@ declare module "orbit-db-store" {
         readonly identity: Identity;
 
         address: { root: string, path: string };
-        /** 
+        /**
          * Contains all entries of this Store
          */
         all: any[];
@@ -25,23 +25,23 @@ declare module "orbit-db-store" {
          */
         key: elliptic.ec.KeyPair;
         replicationStatus: IReplicationStatus;
-         
+
         events: EventEmitter;
 
         /**
          * Apparently not meant for outside usage
-         * @param ipfs 
-         * @param identity 
-         * @param address 
-         * @param options 
+         * @param ipfs
+         * @param identity
+         * @param address
+         * @param options
          */
         protected constructor (ipfs: IPFS, identity, address: string, options: IStoreOptions);
 
         close(): Promise<void>;
         drop(): Promise<void>;
-        
+
         setIdentity(identity: Identity): void;
-        
+
         /**
          * Load the locally persisted database state to memory.
          * @param amount Amount of entries loaded into memory

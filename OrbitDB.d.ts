@@ -20,7 +20,7 @@ declare module 'orbit-db' {
         keystore: Keystore;
 
         static databaseTypes: string[];
-        
+
 
         constructor(ipfs: IPFS, directory?: string, options?: {
             peerId?: string,
@@ -28,9 +28,9 @@ declare module 'orbit-db' {
         });
 
         /**
-         * Creates and returns an instance of OrbitDB. 
-         * @param ipfs 
-         * @param options Other options: 
+         * Creates and returns an instance of OrbitDB.
+         * @param ipfs
+         * @param options Other options:
          * <ul>
          * <li>directory (string): path to be used for the database files. By default it uses './orbitdb'.</li>
          * <li>peerId (string): By default it uses the base58 string of the ipfs peer id.</li>

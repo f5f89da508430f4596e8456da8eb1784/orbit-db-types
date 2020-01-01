@@ -7,13 +7,13 @@ declare module "orbit-db-feedstore" {
 
         remove(hash: string): Promise<string>;
 
-        iterator(options?: { 
+        iterator(options?: {
             gt?: string,
-            gte?: string, 
-            lt?: string, 
-            lte?: string, 
-            limit?: number, 
-            reverse?: boolean 
+            gte?: string,
+            lt?: string,
+            lte?: string,
+            limit?: number,
+            reverse?: boolean
         }): {
             [Symbol.iterator](),
             next(): { value: LogEntry<T>, done: boolean },

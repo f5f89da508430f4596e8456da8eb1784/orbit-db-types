@@ -3,7 +3,7 @@ declare module "orbit-db-counterstore" {
 
     export default class CounterStore extends Store {
         value: number;
-        
+
         inc(value?: number): Promise<string>;
     }
 }

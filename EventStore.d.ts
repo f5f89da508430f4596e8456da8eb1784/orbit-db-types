@@ -5,13 +5,13 @@ declare module "orbit-db-eventstore" {
         add(data: any): Promise<string>;
         get(hash: string): LogEntry<T>;
 
-        iterator(options?: { 
+        iterator(options?: {
             gt?: string,
-            gte?: string, 
-            lt?: string, 
-            lte?: string, 
-            limit?: number, 
-            reverse?: boolean 
+            gte?: string,
+            lt?: string,
+            lte?: string,
+            limit?: number,
+            reverse?: boolean
         }): {
             [Symbol.iterator](),
             next(): { value: LogEntry<T>, done: boolean },
